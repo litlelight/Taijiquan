@@ -1,0 +1,8 @@
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.2.3
+scikit-learn==1.6.1
+PyYAML==6.0.2
+mord==0.7
+xgboost==3.0.2
+pytest==8.4.1

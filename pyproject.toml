@@ -1,0 +1,9 @@
+[project]
+name = "umons-taichi-feature-validation"
+version = "1.0.0"
+description = "Reproducibility code for feature-dependent Kinect V2–Qualisys validation in UMONS-TAICHI"
+requires-python = ">=3.11,<3.14"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

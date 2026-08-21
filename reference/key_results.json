@@ -1,0 +1,159 @@
+{
+  "tolerance": 1e-08,
+  "primary_agreement": {
+    "knee_angle_mean_deg": {
+      "icc_a1": 0.520940206103157,
+      "icc_c1": 0.9545485843788188,
+      "bias": 13.359155976807957,
+      "rmse": 13.716650484695233
+    },
+    "elbow_angle_mean_deg": {
+      "icc_a1": 0.8037234087026702,
+      "icc_c1": 0.9556632926953604,
+      "bias": 10.413310415225077,
+      "rmse": 11.561479463443694
+    },
+    "hip_angle_mean_deg": {
+      "icc_a1": 0.1213195327999033,
+      "icc_c1": 0.1796224983745483,
+      "bias": -6.467005589890673,
+      "rmse": 10.582553435799843
+    },
+    "trunk_sagittal_mean_deg": {
+      "icc_a1": -0.0157505988774457,
+      "icc_c1": -0.0163512920030104,
+      "bias": -0.9584978501778096,
+      "rmse": 4.657871545971162
+    },
+    "pelvis_dispersion": {
+      "icc_a1": 0.9579031854226592,
+      "icc_c1": 0.970576111125814,
+      "bias": -0.0200343946740923,
+      "rmse": 0.0357193252058231
+    },
+    "pelvis_path_length": {
+      "icc_a1": 0.9507461096915784,
+      "icc_c1": 0.9601449276748212,
+      "bias": 0.2322553560328097,
+      "rmse": 0.5143719069582781
+    },
+    "speed_proxy": {
+      "icc_a1": 0.7774806772183034,
+      "icc_c1": 0.9335440252320512,
+      "bias": 0.0901440771124446,
+      "rmse": 0.1038909337425662
+    },
+    "sparc_smoothness": {
+      "icc_a1": 0.2125282784992352,
+      "icc_c1": 0.4898206891272562,
+      "bias": -0.3579158812797607,
+      "rmse": 0.4216036997203702
+    },
+    "p95_angular_velocity_deg_s": {
+      "icc_a1": 0.066284062664961,
+      "icc_c1": 0.3087574002516089,
+      "bias": 102.37431452729555,
+      "rmse": 111.56095270145435
+    },
+    "rms_angular_velocity_deg_s": {
+      "icc_a1": 0.0463297689136003,
+      "icc_c1": 0.2828808115275117,
+      "bias": 58.61930951516719,
+      "rmse": 62.572528769138096
+    }
+  },
+  "alternative_mapping_hip": {
+    "icc_a1": 0.1620855071612808,
+    "icc_c1": 0.6403548372421676,
+    "pearson_r": 0.7844059525811331,
+    "bias": 13.001430629805087
+  },
+  "calibration": {
+    "knee_angle_mean_deg": {
+      "icc_a1_ridge": 0.9496649213261724,
+      "rmse_ridge": 3.204301203151911,
+      "rmse_intercept": 10.502633283618264
+    },
+    "elbow_angle_mean_deg": {
+      "icc_a1_ridge": 0.962145975444455,
+      "rmse_ridge": 4.230407826429541,
+      "rmse_intercept": 15.688097618948865
+    },
+    "hip_angle_mean_deg": {
+      "icc_a1_ridge": -0.1358049707774737,
+      "rmse_ridge": 6.942062962214748,
+      "rmse_intercept": 6.811884594878119
+    },
+    "trunk_sagittal_mean_deg": {
+      "icc_a1_ridge": -0.1602104292374869,
+      "rmse_ridge": 3.9611260864724063,
+      "rmse_intercept": 3.8418911004477456
+    },
+    "p95_angular_velocity_deg_s": {
+      "icc_a1_ridge": 0.4533968031696306,
+      "rmse_ridge": 12.755228231749523,
+      "rmse_intercept": 15.071245438112491
+    },
+    "rms_angular_velocity_deg_s": {
+      "icc_a1_ridge": 0.4089893828609823,
+      "rmse_ridge": 6.11715242201141,
+      "rmse_intercept": 7.082292433930285
+    },
+    "sparc_smoothness": {
+      "icc_a1_ridge": 0.3638602666511465,
+      "rmse_ridge": 0.1812766844403137,
+      "rmse_intercept": 0.2075037022450942
+    }
+  },
+  "sync": {
+    "median_lag_ms_1s": 16.666666666666668,
+    "high_confidence_units": 140,
+    "p95_icc_change": 0.0010579165474333,
+    "sparc_icc_change": 0.0291077901384198
+  },
+  "ranking": {
+    "qualisys_ridge": {
+      "spearman_rho": 0.6713286713286714,
+      "kendall_tau_b": 0.5757575757575757,
+      "mae": 0.7664488987178952,
+      "rmse": 1.001764646452694,
+      "qwk": 0.6153846153846154,
+      "two_sided_full_pipeline_p": 0.1164883511648835,
+      "holm_p_two_reference_conditions": 0.1164883511648835
+    },
+    "kinect_ridge": {
+      "spearman_rho": 0.8321678321678322,
+      "kendall_tau_b": 0.606060606060606,
+      "mae": 0.6873561420320838,
+      "rmse": 0.847560351923792,
+      "qwk": 0.7142857142857143,
+      "two_sided_full_pipeline_p": 0.028997100289971,
+      "holm_p_two_reference_conditions": 0.057994200579942
+    }
+  },
+  "leakage": {
+    "qualisys": {
+      "participant_loso_spearman_rho": 0.3706293706293707,
+      "spearman_rho_mean": 0.857972027972028,
+      "random_minus_loso_spearman_mean": 0.4873426573426573
+    },
+    "kinect": {
+      "participant_loso_spearman_rho": 0.6363636363636365,
+      "spearman_rho_mean": 0.845944055944056,
+      "random_minus_loso_spearman_mean": 0.2095804195804195
+    }
+  },
+  "equalization": {
+    "repetitions": 500,
+    "segments_per_repetition": 1815,
+    "paired_only_spearman_rho": 0.6713286713286714,
+    "spearman_rho_mean": 0.7727552447552448,
+    "spearman_rho_median": 0.7832167832167832,
+    "spearman_rho_p2_5": 0.7412587412587414,
+    "spearman_rho_p97_5": 0.8041958041958043
+  },
+  "rf_training_range": {
+    "kinect__primary_wide": true,
+    "qualisys__primary_wide": true
+  }
+}

@@ -37,3 +37,10 @@ Per-feature affine Ridge calibration maps Kinect feature j to Qualisys feature j
 - Random-forest predictions are asserted to remain within the outer-fold training-label range.
 
 The exact segment-level random-split experiment and the 10,000-permutation analysis supersede earlier diagnostic split/permutation variants for the final manuscript.
+
+
+## Minor-revision reproducibility clarification (v1.0.1)
+
+- The random-forest rows reported in Supplementary Table S41 and the fold-wise predictions in Supplementary Table S45 are the same R25 outer-LOSO runs.
+- `final_closure.py` audits those existing predictions for the training-label-range invariant and does not refit random forests with a new seed.
+- Proportional-bias inference in Supplementary Table S14 is based on participant-cluster bootstrap confidence intervals; ordinary unclustered regression p-values are not used for inference.

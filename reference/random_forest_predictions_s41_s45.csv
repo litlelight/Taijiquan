@@ -1,0 +1,25 @@
+condition,sensor,model,participant_id,true_skill,prediction,selected_params_json,inner_best_mae,training_label_min,training_label_max,prediction_within_training_label_range,outer_held_excluded
+kinect__primary_wide,kinect,random_forest,P01,9.43,7.74106666666667,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",0.9497666666666652,4.97,9.57,True,True
+kinect__primary_wide,kinect,random_forest,P02,9.57,7.817570555555556,"{""max_depth"": 3, ""max_features"": 0.7, ""n_estimators"": 300}",0.9278489826839816,4.97,9.43,True,True
+kinect__primary_wide,kinect,random_forest,P03,8.67,7.89686666666665,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",0.988384848484844,4.97,9.57,True,True
+kinect__primary_wide,kinect,random_forest,P04,8.07,8.072133333333333,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",1.0449212121212137,4.97,9.57,True,True
+kinect__primary_wide,kinect,random_forest,P05,7.23,7.15193333333332,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",1.029981818181814,4.97,9.57,True,True
+kinect__primary_wide,kinect,random_forest,P06,8.5,7.520099999999996,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",0.9209181818181836,4.97,9.57,True,True
+kinect__primary_wide,kinect,random_forest,P07,6.77,7.04268666666666,"{""max_depth"": 3, ""max_features"": 0.7, ""n_estimators"": 300}",1.0254912626262631,4.97,9.57,True,True
+kinect__primary_wide,kinect,random_forest,P08,7.43,7.5215216666666596,"{""max_depth"": 3, ""max_features"": 0.7, ""n_estimators"": 300}",1.0219384920634909,4.97,9.57,True,True
+kinect__primary_wide,kinect,random_forest,P09,6.85,7.281433333333328,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",1.013842424242423,4.97,9.57,True,True
+kinect__primary_wide,kinect,random_forest,P10,6.1,7.447147777777769,"{""max_depth"": 3, ""max_features"": 0.7, ""n_estimators"": 300}",0.919977575757572,4.97,9.57,True,True
+kinect__primary_wide,kinect,random_forest,P11,4.97,7.25928777777776,"{""max_depth"": 3, ""max_features"": 0.7, ""n_estimators"": 300}",0.9094525252525224,5.85,9.57,True,True
+kinect__primary_wide,kinect,random_forest,P12,5.85,7.203599999999998,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",0.9534484848484824,4.97,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P01,9.43,7.396899999999993,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",0.856751515151513,4.97,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P02,9.57,7.3875977777777715,"{""max_depth"": 3, ""max_features"": 0.7, ""n_estimators"": 300}",0.8694418181818154,4.97,9.43,True,True
+qualisys__primary_wide,qualisys,random_forest,P03,8.67,8.118466666666661,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",1.0212090909090903,4.97,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P04,8.07,8.40425833333333,"{""max_depth"": 3, ""max_features"": 0.7, ""n_estimators"": 300}",1.044250425685422,4.97,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P05,7.23,7.425601111111102,"{""max_depth"": 3, ""max_features"": 0.7, ""n_estimators"": 300}",1.0851909090909044,4.97,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P06,8.5,7.491033333333331,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",0.968678787878786,4.97,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P07,6.77,7.130566666666658,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",1.1151242424242402,4.97,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P08,7.43,7.524933333333331,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",1.0564424242424215,4.97,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P09,6.85,7.2103666666666655,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",1.0669272727272718,4.97,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P10,6.1,7.304661111111105,"{""max_depth"": 3, ""max_features"": 0.7, ""n_estimators"": 300}",1.039216038961038,4.97,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P11,4.97,7.276433333333316,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",0.9406999999999954,5.85,9.57,True,True
+qualisys__primary_wide,qualisys,random_forest,P12,5.85,7.014966666666656,"{""max_depth"": null, ""max_features"": 1.0, ""n_estimators"": 300}",1.0032999999999972,4.97,9.57,True,True

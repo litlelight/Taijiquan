@@ -36,6 +36,7 @@ def main() -> None:
         paths,
         ROOT / "artifacts_r01_r18/01_feature_pipeline/feature_cache_v2.csv.gz",
         ROOT / "artifacts_stage_d/03_r22_r27/full_qualisys_feature_cache_v3.csv.gz",
+        ROOT / "artifacts_stage_d/03_r22_r27/r25_nested_loso_predictions_10_conditions.csv",
         output,
         tuple(cfg["qwk_band_thresholds"]),
         args.equalizations,

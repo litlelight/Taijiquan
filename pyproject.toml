@@ -1,6 +1,6 @@
 [project]
 name = "umons-taichi-feature-validation"
-version = "1.0.0"
+version = "1.0.1"
 description = "Reproducibility code for feature-dependent Kinect V2–Qualisys validation in UMONS-TAICHI"
 requires-python = ">=3.11,<3.14"
 

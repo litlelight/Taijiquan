@@ -1,0 +1,3 @@
+condition,sensor,model,folds,spearman_rho,kendall_tau_b,mae,rmse,qwk,all_within_training_range,minimum_margin_above_lower,minimum_margin_below_upper
+kinect__primary_wide,kinect,random_forest,12,0.7412587412587414,0.5151515151515151,0.9216894444444432,1.1777199178313271,0.0,True,1.4092877777777604,1.497866666666667
+qualisys__primary_wide,qualisys,random_forest,12,0.6363636363636365,0.4242424242424242,0.9831491203703674,1.2505146104492901,0.0,True,1.4264333333333168,1.165741666666671

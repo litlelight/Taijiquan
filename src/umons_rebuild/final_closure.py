@@ -130,6 +130,7 @@ def run_final_closure(
     paths: Paths,
     paired_feature_path: Path,
     full_qualisys_cache_path: Path,
+    r25_prediction_path: Path,
     out_dir: Path,
     thresholds: tuple[float, float],
     equalization_repetitions: int = 500,
@@ -227,11 +228,28 @@ def run_final_closure(
         out_dir / "permutation_10000_observed_predictions.csv", index=False
     )
 
-    # Recompute both random-forest conditions with the fold-wise assertion active.
-    rf_predictions = pd.concat([
-        _nested_predictions("random_forest", "qualisys__primary_wide", q_wide, y, participants, thresholds, seed + 700000),
-        _nested_predictions("random_forest", "kinect__primary_wide", k_wide, y, participants, thresholds, seed + 800000),
-    ], ignore_index=True)
+    # Reviewer-facing RF consistency check: reuse the *same* outer-fold predictions
+    # that generate the exploratory five-model x two-sensor metrics (Supplementary
+    # Table S41), rather than launching a second stochastic RF run. This makes
+    # Supplementary Table S45 a fold-wise audit of the exact S41 predictions.
+    r25_predictions = pd.read_csv(r25_prediction_path)
+    rf_predictions = r25_predictions.loc[
+        r25_predictions.model.eq("random_forest")
+        & r25_predictions.condition.isin(["qualisys__primary_wide", "kinect__primary_wide"])
+    ].copy()
+    expected_conditions = {"qualisys__primary_wide", "kinect__primary_wide"}
+    if set(rf_predictions.condition) != expected_conditions or len(rf_predictions) != 24:
+        raise AssertionError("R25 random-forest prediction table must contain exactly 12 folds for each sensor")
+    if not rf_predictions.outer_held_excluded.astype(bool).all():
+        raise AssertionError("R25 random-forest predictions include an outer-held participant in training")
+    for row in rf_predictions.itertuples(index=False):
+        if not (float(row.training_label_min) - 1e-12 <= float(row.prediction) <= float(row.training_label_max) + 1e-12):
+            raise AssertionError(
+                f"R25 random-forest prediction {row.prediction:.12g} for {row.participant_id} "
+                f"is outside training-label range [{row.training_label_min:.12g}, {row.training_label_max:.12g}]"
+            )
+    rf_predictions["prediction_within_training_label_range"] = True
+    rf_predictions = rf_predictions.sort_values(["sensor", "participant_id"]).reset_index(drop=True)
     rf_predictions.to_csv(out_dir / "rf_predictions_with_training_range_assertion.csv", index=False)
     rf_checks = rf_predictions.groupby("condition", as_index=False).agg(
         folds=("participant_id", "count"),

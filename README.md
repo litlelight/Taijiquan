@@ -95,6 +95,17 @@ KEY_RESULT_VERIFICATION_PASS
 REPRODUCTION_PASS
 ```
 
+## Random-forest outputs used in Supplementary Tables S41 and S45
+
+Supplementary Tables S41 and S45 now refer to the **same outer-LOSO random-forest runs**. The fold-wise predictions that generate the S41 random-forest metrics and are audited for the training-label-range invariant in S45 are provided directly in:
+
+```text
+reference/random_forest_predictions_s41_s45.csv
+reference/random_forest_s41_s45_summary.csv
+```
+
+The final-closure stage reads the R25 prediction table produced by `scripts/run_ranking.py`; it does **not** launch a second stochastic random-forest fit. This removes the ambiguity identified during minor revision.
+
 ## Repository layout
 
 ```text
@@ -125,4 +136,10 @@ Tits, M., Laraba, S., Caulier, E., Tilmanne, J. & Dutoit, T. UMONS-TAICHI: a mul
 
 ## Code citation
 
-Please cite the accompanying manuscript and the archived repository DOI once the GitHub release is deposited on Zenodo.
+Please cite the accompanying manuscript and this exact code release:
+
+- Repository: https://github.com/litlelight/Taijiquan
+- Exact release used for the minor-revision results: `v1.0.1`
+- Version-specific URL: https://github.com/litlelight/Taijiquan/tree/v1.0.1
+
+The `v1.0.1` tag should remain immutable. Any later code changes should use a new tag.

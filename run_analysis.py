@@ -47,7 +47,7 @@ def main() -> None:
     steps.append(run_step("key_result_verification", ["verify_key_results.py"]))
 
     summary = {
-        "version": "1.0.0",
+        "version": "1.0.1",
         "status": "PASS",
         "parameters": {"bootstrap": 2000, "random_segment_splits": 200, "equalizations": 500, "permutations": 10000},
         "elapsed_seconds": time.time() - started,
